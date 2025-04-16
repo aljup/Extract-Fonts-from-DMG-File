@@ -13,6 +13,91 @@ A simple web-based tool to upload `.dmg` files (usually containing Mac fonts), e
 - ✅ One-click download of bundled fonts
 
 ---
+. Project Structure
+
+project-folder/
+│
+├── upload_extract.php         ← Main file
+├── uploads/                   ← Stores uploaded `.dmg` files
+├── fontsnew/                  ← Stores extracted fonts
+├── fontsnew/fonts_bundle.zip  ← Compressed ZIP archive of fonts
+├── README.md                  ← This file
+
+    Make sure both uploads/ and fontsnew/ folders are writable:
+
+chmod -R 777 uploads fontsnew
+
+3. Running the Project
+
+    Place the project on your local server (e.g., XAMPP/WAMP) or use the built-in PHP server:
+
+php -S localhost:8000
+
+    Open in your browser:
+
+http://localhost:8000/upload_extract.php
+
+🌍 Language Switching
+
+Supports both Arabic and English.
+
+    Arabic (RTL): ?lang=ar
+
+    English (LTR): ?lang=en
+
+Example:
+
+http://localhost:8000/upload_extract.php?lang=en
+
+A language toggle button is also available in the UI.
+📥 How It Works
+
+    Upload a .dmg file containing Mac fonts.
+
+    Watch the progress bar as the file uploads and is processed.
+
+    After extraction, click the download button to get a .zip file of all fonts.
+
+🛠 Troubleshooting
+Issue	Solution
+Upload fails or stalls	Check file size limits and folder permissions
+Fonts not found	Ensure .pkg and Payload files exist in the .dmg
+ZipArchive errors	Install the PHP zip extension
+✨ Customization Ideas
+
+    Preview fonts in browser after extraction
+
+    Allow multiple .dmg uploads at once
+
+    Convert fonts to .woff / .woff2 for web usage
+
+    Save uploaded files with user-defined names
+
+Let me know if you'd like help implementing any of these!
+🧑‍💻 Contribute
+
+Pull requests are welcome! Feel free to improve the interface, add features, or fix bugs.
+📜 License
+
+Open source — free to use, modify, and share.
+
+Made with 💙 by [You] — Enjoy!
+
+
+---
+
+### ✅ Next Step?
+
+Would you like:
+
+- A version that includes screenshots or GIFs for GitHub?
+- A downloadable `.zip` with this file and full project structure?
+- To deploy it on a live server or share it via GitHub?
+
+Let me know and I’ll help you wrap it all up! 🚀
+
+Get smarter responses, upload files and images, and more.
+
 
 ## 🚀 How to Use
 
